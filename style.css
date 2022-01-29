@@ -1,0 +1,42 @@
+:root {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    --light-blue: rgb(197,215,236);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+div {
+    border: 1px solid black;
+}
+
+#container {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+}
+
+#left-column {
+    display: flex;
+    flex-direction: column;
+    background-image: url("nasa-aurora-resized.jpg");
+}
+
+#right-column {
+    display: flex;
+    flex-direction: column;
+}
+
+#box-top-left {
+    flex: 1.5;
+}
+
+#box-logo {
+    flex: 1;
+}
+
+#box-bottom-left {
+    flex: 4;
+}
