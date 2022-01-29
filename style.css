@@ -1,6 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Comforter&display=swap');
 :root {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     --light-blue: rgb(197,215,236);
+    --near-black: rgb(8,18,34);
+    --near-black-background: rgba(8,18,34,0.5);
+    --padding-left: 35px;
+    --off-white: rgb(247, 251, 255);
 }
 
 * {
@@ -11,6 +16,7 @@
 
 div {
     border: 1px solid black;
+    color: var(--near-black);
 }
 
 #container {
@@ -34,9 +40,48 @@ div {
 }
 
 #box-logo {
+    display: flex;
     flex: 1;
+    font-family: 'Comforter', cursive;
+    font-size: 100px;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: var(--near-black-background);
 }
 
 #box-bottom-left {
     flex: 4;
+}
+
+#box-quote {
+    background-color: var(--off-white);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1.4em;
+    padding-left: var(--padding-left);
+    padding-right: 100px;
+    padding-bottom: 65px;
+}
+
+#box-button {
+    background-color: var(--off-white);
+}
+
+#box-form {
+    display: flex;
+    justify-content: center;
+}
+
+fieldset {
+    display: flex;
+    flex: 1;
+    border: 1px solid red;
+}
+
+li {
+    font-size: 20px;
 }
