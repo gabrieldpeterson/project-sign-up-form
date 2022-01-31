@@ -9,9 +9,10 @@
 }
 
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    height: 100%;
+    color: var(--near-black);
 }
 
 div {
@@ -22,17 +23,21 @@ div {
 #container {
     display: grid;
     grid-template-columns: 2fr 3fr;
+    grid-template-rows: 1fr;
+    height: 100vh;
 }
 
 #left-column {
     display: flex;
     flex-direction: column;
     background-image: url("nasa-aurora-resized.jpg");
+    grid-area: 1/1;
 }
 
 #right-column {
     display: flex;
     flex-direction: column;
+    grid-area: 1/2;
 }
 
 #box-top-left {
@@ -65,23 +70,61 @@ div {
     padding-left: var(--padding-left);
     padding-right: 100px;
     padding-bottom: 65px;
+    height: 35vh;
 }
 
 #box-button {
     background-color: var(--off-white);
+    height: 30vh;
 }
 
 #box-form {
     display: flex;
     justify-content: center;
+    flex: 1;
+}
+
+form {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: var(--padding-left);
+}
+
+button, input, select, textarea {
+    font-family: inherit;
+    font-size: 100%;
+    -webkit-appearance: none;
+}
+
+input {
+    width: 20rem;
+    height: 2.3rem;
+    padding: 0 10px;
+    border: 1px solid grey;
+    border-radius: 6px;
 }
 
 fieldset {
     display: flex;
-    flex: 1;
     border: 1px solid red;
 }
 
+legend {
+    font-size: 1.5rem;
+}
+
+label {
+    font-size: 0.75rem;
+    color: rgb(78, 78, 78);
+}
+
+ul {
+    list-style-type: none;
+}
+
 li {
-    font-size: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 30px;
 }
